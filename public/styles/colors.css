@@ -1,45 +1,56 @@
-@font-face {
-    font-family: 'Aileron Heavy';
-    src: url("../fonts/Aileron-Heavy.otf");
+@media screen and (max-width: 1920px) {
+  html {
+    -moz-transform: scale(0.8, 0.8);
+    zoom: 0.8;
+    zoom: 80%;
+  }
 }
-
-@font-face {
-    font-family: 'Aileron SemiBold';
-    src: url("../fonts/Aileron-SemiBold.otf");
-}
-
-@font-face {
-    font-family: 'Aileron Light';
-    src: url("../fonts/Aileron-Light.otf");
+@media screen and (max-width: 800px) {
+  html {
+    -moz-transform: scale(0.50, 0.50);
+    zoom: 0.50;
+    zoom: 50%;
+  }
 }
 
 body {
     background-color: #fff;
     margin: 0;
-    font-family: "Aileron Heavy", sans-serif;
+    font-family: "aileronheavy", sans-serif;
     display: flex;
     flex-direction: column;
+    align-content: center;
 }
 
 #headerContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-self: center;
+    font-size: 500%;
 }
 
-h1 {
-    color: white;
-    text-align: center;
+.header {
     background-color: #fff;
     color: #232323;
-    margin: 0;
-    font-weight: normal;
     text-transform: uppercase;
-    line-height: 1.1;
-    padding: 20px 0;
+    margin: 5% 0 5% 0;
+    font-family: "aileronblack", sans-serif;
+    min-width: 320px;
+}
+
+.rgbLetter {
+    background-color: #232323;
+    color: #fff;
+    padding: 0 0 0 10px;
+}
+
+.rgbNumber {
     display: inline-block;
-    font-family: "Aileron Black", sans-serif;
-    /*    transition: background-color 600ms;
-        --webkit-transition: background-color 600ms;
-        --moz-transition: background-color 600ms;*/
+    margin: 0 0 0 10px;
+    min-width: 158px;
+    text-align: center;
+    font-family: "aileronheavy", sans-serif;
 }
 
 .square {
@@ -49,25 +60,29 @@ h1 {
     float: left;
     margin: 1.66%;
     border-radius: 50%;
-    transition: background-color 600ms;
-    --webkit-transition: background-color 600ms;
-    --moz-transition: background-color 600ms;
+    transition: 600ms;
+    --webkit-transition: 600ms;
+    --moz-transition: 600ms;
+}
+
+.square:hover {
 }
 
 #container {
-    width: 600px;
+    width: 800px;
     margin: 50px auto;
     align-self: center;
 }
 
 
 #stripe {
+    justify-content: space-between;
+    display: flex;
     background-color: white;
-    text-align: center;
     color: black;
-    font-size: 130%;
+    font-size: 250%;
     align-self: center;
-    min-width: 800px;
+    min-width: 960px;
 }
 
 .selected {
@@ -75,12 +90,8 @@ h1 {
     background: #232323;
 }
 
-#colorDisplay {
-    font-size: 200%;
-}
-
 button {
-    font-family: "Aileron Black",sans-serif;
+    font-family: "aileronblack",sans-serif;
     border: none;
     background: none;
     text-transform: uppercase;
@@ -91,7 +102,7 @@ button {
     font-size: inherit;
     transition: all 400ms;
     outline: none;
-    margin-right: -5px;
+    margin-right: -8px;
 }
 
 button:hover {
@@ -100,13 +111,13 @@ button:hover {
 }
 
 #msg {
-display: inline-block;
-width: 30%;
-font-weight: bold;
-letter-spacing: 1px;
-text-transform: uppercase;
-font-size: inherit;
-color: #232323;
+    font-family: aileronlight_italic, sans-serif;
+    display: inline-block;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: inherit;
+    color: #232323;
 }
 
 

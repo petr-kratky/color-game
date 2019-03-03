@@ -1,3 +1,9 @@
+var siteWidth = 1280;
+var scale = screen.width /siteWidth;
+
+document.querySelector('meta[name="viewport"]')
+    .setAttribute('content', 'width='+siteWidth+', initial-scale='+scale+'');
+
 var gameOver;
 
 //number of circles to play with -- game starts at hard mode (6 circles)
@@ -8,14 +14,22 @@ var colors = [];
 //variable holding the winning rgb color
 var pickedColor;
 
+//variables for color displays
+var red;
+var green;
+var blue;
+
 //selecting elements from HTML
 var squares = document.querySelectorAll(".square");
-var colorDisplay = document.querySelector("#colorDisplay");
 var messageDisplay = document.querySelector("#msg");
 var title = document.querySelector("h1");
 var resetButton = document.querySelector("#reset");
 var difBtn = document.querySelectorAll(".difBtn");
 var body = document.querySelector("body");
+var colorDisplayRed = document.querySelector('#red');
+var colorDisplayGreen = document.querySelector('#green');
+var colorDisplayBlue = document.querySelector('#blue');
+
 
 init();
 
@@ -39,6 +53,14 @@ function setupDiffButtons() {
               resetGame();
           })
       }
+}
+
+function extractColors() {
+    var colorString = pickedColor;
+    var colorsOnly = colorString.substring(colorString.indexOf('(') + 1, colorString.lastIndexOf(')')).split(/,\s*/);
+    red = colorsOnly[0];
+    green = colorsOnly[1];
+    blue = colorsOnly[2];
 }
 
 //main logic - applies colors to all squares and ads event listeners determining whether the color was guessed correctly or not
@@ -72,8 +94,10 @@ function resetGame() {
     //pick win color
     pickedColor = pickColor();
     //update UI for new game
-    colorDisplay.textContent = pickedColor;
-/*    title.style.backgroundColor = "#fff";*/
+    extractColors();
+    colorDisplayRed.textContent = red;
+    colorDisplayGreen.textContent = green;
+    colorDisplayBlue.textContent = blue;
     messageDisplay.textContent = "";
     //fill circles with colors
     for (var i = 0; i < squares.length; i++) {
