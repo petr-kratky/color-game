@@ -73,7 +73,7 @@ function setupSquares() {
             } else if (this.style.backgroundColor === pickedColor) {
                 messageDisplay.textContent = "You've won!";
                 changeColors(pickedColor);
-                resetButton.textContent = "Play Again?";
+                resetButton.textContent = "play again";
                 gameOver = true;
             } else {
                 this.style.backgroundColor = "#fff";
