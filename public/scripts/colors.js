@@ -99,6 +99,7 @@ function resetGame() {
     colorDisplayGreen.textContent = green;
     colorDisplayBlue.textContent = blue;
     messageDisplay.textContent = "";
+    resetButton.textContent = "new colors";
     //fill circles with colors
     for (var i = 0; i < squares.length; i++) {
         if (colors[i]) {
