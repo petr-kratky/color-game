@@ -54,7 +54,7 @@ function setupSquares() {
                 resetButton.textContent = "Play Again?";
                 gameOver = true;
             } else {
-                this.style.backgroundColor = "#232323";
+                this.style.backgroundColor = "#fff";
                 messageDisplay.textContent = "Try again!";
             }
         })
@@ -73,7 +73,7 @@ function resetGame() {
     pickedColor = pickColor();
     //update UI for new game
     colorDisplay.textContent = pickedColor;
-    title.style.backgroundColor = "steelblue";
+/*    title.style.backgroundColor = "#fff";*/
     messageDisplay.textContent = "";
     //fill circles with colors
     for (var i = 0; i < squares.length; i++) {
@@ -91,7 +91,7 @@ function changeColors(color) {
     for (var i = 0; i < squares.length; i++) {
                 squares[i].style.backgroundColor = color;
     }
-    title.style.backgroundColor = color;
+/*    title.style.backgroundColor = color;*/
 }
 
 //picks a random color from the color array

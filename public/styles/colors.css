@@ -14,9 +14,32 @@
 }
 
 body {
-    background-color: #232323;
+    background-color: #fff;
     margin: 0;
     font-family: "Aileron Heavy", sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+#headerContainer {
+    align-self: center;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    background-color: #fff;
+    color: #232323;
+    margin: 0;
+    font-weight: normal;
+    text-transform: uppercase;
+    line-height: 1.1;
+    padding: 20px 0;
+    display: inline-block;
+    font-family: "Aileron Black", sans-serif;
+    /*    transition: background-color 600ms;
+        --webkit-transition: background-color 600ms;
+        --moz-transition: background-color 600ms;*/
 }
 
 .square {
@@ -34,33 +57,22 @@ body {
 #container {
     width: 600px;
     margin: 50px auto;
+    align-self: center;
 }
 
-h1 {
-    color: white;
-    text-align: center;
-    background-color: steelblue;
-    margin: 0;
-    font-weight: normal;
-    text-transform: uppercase;
-    line-height: 1.1;
-    padding: 20px 0;
-    transition: background-color 600ms;
-    --webkit-transition: background-color 600ms;
-    --moz-transition: background-color 600ms;
-}
 
 #stripe {
     background-color: white;
-    height: 30px;
     text-align: center;
     color: black;
     font-size: 130%;
+    align-self: center;
+    min-width: 800px;
 }
 
 .selected {
     color: white;
-    background: steelblue;
+    background: #232323;
 }
 
 #colorDisplay {
@@ -68,12 +80,13 @@ h1 {
 }
 
 button {
+    font-family: "Aileron Black",sans-serif;
     border: none;
     background: none;
     text-transform: uppercase;
     height: 100%;
     font-weight: 700;
-    color: steelblue;
+    color: #232323;
     letter-spacing: 1px;
     font-size: inherit;
     transition: all 400ms;
@@ -81,19 +94,20 @@ button {
     margin-right: -5px;
 }
 
-#msg {
-    display: inline-block;
-    width: 30%;
-    font-weight: bold;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-size: inherit;
-    color: #232323;
-}
-
-
-
 button:hover {
-    color: white;
-    background: steelblue;
+    color: #fff;
+    background: #232323;
 }
+
+#msg {
+display: inline-block;
+width: 30%;
+font-weight: bold;
+letter-spacing: 1px;
+text-transform: uppercase;
+font-size: inherit;
+color: #232323;
+}
+
+
+
